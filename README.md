@@ -16,10 +16,9 @@ It is served by `nginx:1-alpine` from the image
   exist: it is never deployed as it is.
 - Changes go to `main` by pull request.
 
-**GHCR package visibility:** a new package under the `drunikbe` organisation
-is private. After the first push, Andrei sets the package
-`geniusgarage.org` to public (package settings → Change visibility), or the
-swarm cannot pull the image.
+**GHCR package visibility:** the package `geniusgarage.org` is public, so the
+swarm pulls the image without credentials. Keep it public: a private package
+makes every pull fail.
 
 ## Ingress
 
